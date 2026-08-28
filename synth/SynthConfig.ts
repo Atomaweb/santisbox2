@@ -411,6 +411,8 @@ export class Config {
         { name: "continue", isSeamless: true, continues: true, slides: false, slideTicks: 3, includeAdjacentPatterns: true },
         { name: "slide", isSeamless: true, continues: false, slides: true, slideTicks: 3, includeAdjacentPatterns: true },
         { name: "slide in pattern", isSeamless: true, continues: false, slides: true, slideTicks: 3, includeAdjacentPatterns: false },
+		{ name: "classic continue", isSeamless: false, continues: true, slides: false, slideTicks: 3, includeAdjacentPatterns: false },
+		{name: "free", isSeamless: true, continues: true, slides: true, slideTicks: 3, includeAdjacentPatterns: true}
     ]);
     public static readonly vibratos: DictionaryArray<Vibrato> = toNameMap([
         { name: "none", amplitude: 0.0, type: 0, delayTicks: 0 },
