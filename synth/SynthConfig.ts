@@ -284,8 +284,9 @@ export class Config {
         { name: "Hexatonic", realName: "hexatonic", flags: [true, false, false, true, true, false, false, true, true, false, false, true] }, // Hexatonic
 		{name: "Monotonic", realName: "monotonic", flags: [true,  false,  false,  false,  false,  false,  false,  false,  false,  false,  false, ] }, // Monotonic
 		{name: "Duotonic", realName: "duotonic", flags: [true,  false,  false,  false,  false,  false,  false,  true,  false,  false,  false,  false] }, // Duotonic
-
-    ]);
+		{name: "Die", realName: "die", flags: [true,  false,  false,  false,  false,  false,  false,  false,  true,  false,  false,  false] }, // Die
+		{name: "Noise Scale", realName: "noise scale", flags: [true,  false,  false,  false,  false,  false,  true,  false,  false,  false,  false,  false] }, // Noise Scale
+     ]);
     public static readonly keys: DictionaryArray<Key> = toNameMap([
         { name: "C", isWhiteKey: true, basePitch: 12 }, // C0 has index 12 on the MIDI scale. C7 is 96, and C9 is 120. C10 is barely in the audible range.
         { name: "C♯", isWhiteKey: false, basePitch: 13 },
