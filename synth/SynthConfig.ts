@@ -282,7 +282,8 @@ export class Config {
         { name: "Whole Tone", realName: "whole tone", flags: [true, false, true, false, true, false, true, false, true, false, true, false] }, // Whole Tone
         { name: "Octatonic", realName: "octatonic", flags: [true, false, true, true, false, true, true, false, true, true, false, true] }, // Octatonic
         { name: "Hexatonic", realName: "hexatonic", flags: [true, false, false, true, true, false, false, true, true, false, false, true] }, // Hexatonic
-
+		{name: "Monotonic", realName: "monotonic", flags: [true,  false,  false,  false,  false,  false,  false,  false,  false,  false,  false, ] }, // Monotonic
+		{name: "Duotonic", realName: "duotonic", flags: [true,  false,  false,  false,  false,  false,  false,  true,  false,  false,  false,  false] }, // Duotonic
 
     ]);
     public static readonly keys: DictionaryArray<Key> = toNameMap([
