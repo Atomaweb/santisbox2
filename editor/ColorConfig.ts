@@ -15,15 +15,15 @@ export class ColorConfig {
     public static colorLookup: Map<number, ChannelColors> = new Map<number, ChannelColors>();
 	public static usesColorFormula: boolean = false;
     public static readonly themes: { [name: string]: string } = {
-        "dark classic": `
+        "santi?s box dark": `
 			:root {
-				--page-margin: black;
-				--editor-background: black;
-				--hover-preview: white;
-				--playhead: white;
-				--primary-text: white;
+				--page-margin: blue;
+				--editor-background: rgb(0, 0, 125);
+				--hover-preview: cyan;
+				--playhead: light cyan;
+				--primary-text: azure;
 				--secondary-text: #999;
-				--inverted-text: black;
+				--inverted-text: light blue;
 				--text-selection: rgba(119,68,255,0.99);
 				--box-selection-fill: rgba(255,255,255,0.2);
 				--loop-accent: #74f;
