@@ -453,7 +453,24 @@ export class Config {
         { name: "bowed", voices: 2, spread: 0.02, offset: 0.0, expression: 1.0, sign: -1.0 },
         { name: "piano", voices: 2, spread: 0.01, offset: 0.0, expression: 1.0, sign: 0.7 },
         { name: "warbled", voices: 2, spread: 0.25, offset: 0.05, expression: 0.9, sign: -0.8 },
-		
+		{ name: "hecking gosh",      voices: 2, spread: 6.25, offset: -6.0, expression: 0.8, sign: -0.7 },
+		{ name: "spinner",      voices: 2, spread: 0.02, offset: 0.0, expression: 1.0, sign: 1.0 },
+		{ name: "detune ",      voices: 1, spread: 0.0, offset: 0.25, expression: 1.0, sign: 1.0 },
+	    { name: "rising",      voices: 2, spread: 1.0, offset: 0.7, expression: 0.95, sign: 1.0 },
+		{ name: "vibrate",      voices: 2, spread: 3.5, offset: 7.0, expression: 0.975, sign: 1.0 },
+		{ name: "fourths",      voices: 2, spread: 4.0, offset: 4.0, expression: 0.95, sign: 1.0 },
+		{ name: "bass",      voices: 1, spread: 0.0, offset: -7.0, expression: 1.0, sign: 1.0 },
+		{ name: "dirty",      voices: 2, spread: 0.0, offset: 0.1, expression: 0.975, sign: 1.0 },
+		{ name: "stationary",      voices: 2, spread: 3.5, offset: 0.0, expression: 0.9, sign: 1.0 },
+		{ name: "recurve",      voices: 2, spread: 0.005, offset: 0.0, expression: 1.0, sign: 1.0 },
+		{ name: "voiced",      voices: 2, spread: 9.5, offset: 0.0, expression: 1.0, sign: 1.0 },
+		{ name: "flutucate",      voices: 2, spread: 12.0, offset: 0.0, expression: 1.0, sign: 1.0 },
+		{ name: "thin",      voices: 1, spread: 0.0, offset: 50.0, expression: 1.0, sign: 1.0 },
+		{ name: "inject",      voices: 2, spread: 6.0, offset: 0.4, expression: 1.0, sign: 1.0 },
+		{ name: "askewed",      voices: 2, spread: 0.0, offset: 0.42, expression: 0.7, sign: 1.0 },
+		{ name: "resonance",      voices: 2, spread: 0.0025, offset: 0.1, expression: 0.8, sign: -1.5 },
+		{ name: "FART",      voices: 2, spread: 13.0, offset: -5.0, expression: 1.0, sign: -3.0 },
+		{ name: "coleon",      voices: 2, spread: -5.0, offset: -0.5, expression: 1.0, sign: -5.0 },
     ]);
     public static readonly effectNames: ReadonlyArray<string> = ["reverb", "chorus", "panning", "distortion", "bitcrusher", "note filter", "echo", "pitch shift", "detune", "vibrato", "transition type", "chord type"];
     public static readonly effectOrder: ReadonlyArray<EffectType> = [EffectType.panning, EffectType.transition, EffectType.chord, EffectType.pitchShift, EffectType.detune, EffectType.vibrato, EffectType.noteFilter, EffectType.distortion, EffectType.bitcrusher, EffectType.chorus, EffectType.echo, EffectType.reverb];
