@@ -302,7 +302,7 @@ export class Config {
         { name: "A", isWhiteKey: true, basePitch: 21 },
         { name: "A♯", isWhiteKey: false, basePitch: 22 },
         { name: "B", isWhiteKey: true, basePitch: 23 },
-		{ name: "O_O", isWhiteKey: true, basePitch: 24 },
+		{ name: "O_O", isWhiteKey: false, basePitch: 24 },
     ]);
     public static readonly blackKeyNameParents: ReadonlyArray<number> = [-1, 1, -1, 1, -1, 1, -1, -1, 1, -1, 1, -1];
     public static readonly tempoMin: number = 30;
