@@ -44,6 +44,7 @@ export const enum SustainType {
 export const enum EnvelopeType {
     noteSize,
     none,
+	pitch,
     punch,
     flare,
     twang,
@@ -51,7 +52,12 @@ export const enum EnvelopeType {
     tremolo,
     tremolo2,
     decay,
-    blip
+    blip,
+	tripolo,
+	pentolo,
+	mazuri,
+	fall,
+	omega
 }
 
 export const enum InstrumentType {
@@ -419,7 +425,7 @@ export class Config {
         { name: "slide", isSeamless: true, continues: false, slides: true, slideTicks: 3, includeAdjacentPatterns: true },
         { name: "slide in pattern", isSeamless: true, continues: false, slides: true, slideTicks: 3, includeAdjacentPatterns: false },
 		{ name: "classic continue", isSeamless: false, continues: true, slides: false, slideTicks: 3, includeAdjacentPatterns: false },
-		{name: "free", isSeamless: true, continues: true, slides: true, slideTicks: 3, includeAdjacentPatterns: true}
+		{ name: "free", isSeamless: true, continues: true, slides: true, slideTicks: 3, includeAdjacentPatterns: true}
     ]);
     public static readonly vibratos: DictionaryArray<Vibrato> = toNameMap([
         { name: "none", amplitude: 0.0, type: 0, delayTicks: 0 },
@@ -532,6 +538,7 @@ export class Config {
     public static readonly envelopes: DictionaryArray<Envelope> = toNameMap([
         { name: "none", type: EnvelopeType.none, speed: 0.0 },
         { name: "note size", type: EnvelopeType.noteSize, speed: 0.0 },
+		{ name: "pitch", type: EnvelopeType.pitch, speed: 0.0 },
         { name: "punch", type: EnvelopeType.punch, speed: 0.0 },
         { name: "flare 1", type: EnvelopeType.flare, speed: 32.0 },
         { name: "flare 2", type: EnvelopeType.flare, speed: 8.0 },
@@ -542,18 +549,33 @@ export class Config {
         { name: "swell 1", type: EnvelopeType.swell, speed: 32.0 },
         { name: "swell 2", type: EnvelopeType.swell, speed: 8.0 },
         { name: "swell 3", type: EnvelopeType.swell, speed: 2.0 },
-        { name: "lfo1", type: EnvelopeType.tremolo, speed: 4.0 },
-        { name: "lfo2", type: EnvelopeType.tremolo, speed: 2.0 },
-        { name: "lfo3", type: EnvelopeType.tremolo, speed: 1.0 },
-        { name: "lfo4", type: EnvelopeType.tremolo2, speed: 4.0 },
-        { name: "lfo5", type: EnvelopeType.tremolo2, speed: 2.0 },
-        { name: "lfo6", type: EnvelopeType.tremolo2, speed: 1.0 },
+        { name: "lfo 1", type: EnvelopeType.tremolo, speed: 4.0 },
+        { name: "lfo 2", type: EnvelopeType.tremolo, speed: 2.0 },
+        { name: "lfo 3", type: EnvelopeType.tremolo, speed: 1.0 },
+        { name: "lfo 4", type: EnvelopeType.tremolo2, speed: 4.0 },
+        { name: "lfo 5", type: EnvelopeType.tremolo2, speed: 2.0 },
+        { name: "lfo 6", type: EnvelopeType.tremolo2, speed: 1.0 },
         { name: "decay 1", type: EnvelopeType.decay, speed: 10.0 },
         { name: "decay 2", type: EnvelopeType.decay, speed: 7.0 },
         { name: "decay 3", type: EnvelopeType.decay, speed: 4.0 },
         { name: "blip 1", type: EnvelopeType.blip, speed: 6.0 },
         { name: "blip 2", type: EnvelopeType.blip, speed: 16.0 },
         { name: "blip 3", type: EnvelopeType.blip, speed: 32.0 },
+		{ name: "tripolo 1", type: EnvelopeType.tripolo, speed: 7.0 },
+		{ name: "tripolo 2", type: EnvelopeType.tripolo, speed: 25.0 },
+		{ name: "pentolo 1", type: EnvelopeType.pentolo, speed: 4.0 },
+		{ name: "pentolo 2", type: EnvelopeType.pentolo, speed: 10.0 },
+		{ name: "pentolo 3", type: EnvelopeType.pentolo, speed: 25.0 },
+        { name: "mazuri 1", type: EnvelopeType.mazuri, speed: 3.0 },
+		{ name: "mazuri 2", type: EnvelopeType.mazuri, speed: 9.0 },
+        { name: "mazuri 3", type: EnvelopeType.mazuri, speed: 15.0 },
+        { name: "mazuri 4", type: EnvelopeType.mazuri, speed: 21.0 },
+        { name: "mazuri 5", type: EnvelopeType.mazuri, speed: 25.0 },
+        { name: "fall 1", type: EnvelopeType.fall, speed: 4.0 },
+        { name: "fall 2", type: EnvelopeType.fall, speed:8.0 },
+        { name: "fall 3", type: EnvelopeType.fall, speed: 15.0 },
+        { name: "omega 1", type: EnvelopeType.omega, speed: 3.0 },
+        { name: "omega 2", type: EnvelopeType.omega, speed: 8.0 },	
     ]);
     public static readonly feedbacks: DictionaryArray<Feedback> = toNameMap([
         { name: "1⟲", indices: [[1], [], [], []] },
