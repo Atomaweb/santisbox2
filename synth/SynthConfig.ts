@@ -288,7 +288,9 @@ export class Config {
 		{name: "Noise Scale", realName: "noise scale", flags: [true,  false,  false,  false,  false,  false,  true,  false,  false,  false,  false,  false] }, // Noise Scale
      ]);
     public static readonly keys: DictionaryArray<Key> = toNameMap([
+		{ name: "B-", isWhiteKey: false, basePitch: 11 },
         { name: "C", isWhiteKey: true, basePitch: 12 }, // C0 has index 12 on the MIDI scale. C7 is 96, and C9 is 120. C10 is barely in the audible range.
+		{ name: "detunia", isWhiteKey: false, basePitch: 12.5 },
         { name: "C♯", isWhiteKey: false, basePitch: 13 },
         { name: "D", isWhiteKey: true, basePitch: 14 },
         { name: "D♯", isWhiteKey: false, basePitch: 15 },
