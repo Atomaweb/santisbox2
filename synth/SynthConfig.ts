@@ -392,10 +392,35 @@ export class Config {
         { name: "clang", expression: 0.4, basePitch: 69, pitchFilterMult: 1024.0, isSoft: false, samples: null },
         { name: "buzz", expression: 0.3, basePitch: 69, pitchFilterMult: 1024.0, isSoft: false, samples: null },
         { name: "hollow", expression: 1.5, basePitch: 96, pitchFilterMult: 1.0, isSoft: true, samples: null },
-        { name: "shine", expression: 1.0, basePitch: 69, pitchFilterMult: 1024.0, isSoft: false, samples: null },
+        { name: "shine", expression: 1.0, basePitch: 69, pitchFilterMult: 1024.0, isSoft: false, samples: null }, // Bro is louder than buzz💀
         { name: "deep", expression: 1.5, basePitch: 120, pitchFilterMult: 1024.0, isSoft: true, samples: null },
         { name: "cutter", expression: 0.005, basePitch: 96, pitchFilterMult: 1024.0, isSoft: false, samples: null },
         { name: "metallic", expression: 1.0, basePitch: 96, pitchFilterMult: 1024.0, isSoft: false, samples: null },
+		{ name: "static", expression: 1.0, basePitch: 96, pitchFilterMult: 1024.0, isSoft: false, samples: null },
+		// technically these are from the pandorasbox beta but whatever
+		{ name: "1-bit white", expression: 0.5, basePitch: 74.41, pitchFilterMult: 1024.0, isSoft: false, samples: null },
+		{ name: "1-bit metallic", expression: 0.5, basePitch: 86.41, pitchFilterMult: 1024.0, isSoft: false, samples: null },
+		// ultrabox noises
+		{ name: "crackling", expression: 0.9, basePitch: 69, pitchFilterMult: 1024.0, isSoft: false, samples: null },
+		{ name: "pink", expression: 1.0, basePitch: 69, pitchFilterMult: 8.0, isSoft: true, samples: null },
+		{ name: "brownian", expression: 1.0, basePitch: 69, pitchFilterMult: 1024.0, isSoft: false, samples: null },
+		// santi's box noises
+		{ name: "null", expression: 0.0, basePitch: 0, pitchFilterMult: 0.0, isSoft: false, samples: null },
+		{ name: "soften retro", expression: 0.25, basePitch: 69, pitchFilterMult: 1024.0, isSoft: true, samples: null },
+		{ name: "soften clang", expression: 0.4, basePitch: 69, pitchFilterMult: 1024.0, isSoft: true, samples: null },
+		{ name: "soften buzz", expression: 0.3, basePitch: 69, pitchFilterMult: 1024.0, isSoft: true, samples: null },
+		{ name: "soften shine", expression: 1.0, basePitch: 69, pitchFilterMult: 1024.0, isSoft: true, samples: null },
+		{ name: "soften cutter", expression: 0.005, basePitch: 96, pitchFilterMult: 1024.0, isSoft: true, samples: null },
+		{ name: "soften metallic", expression: 1.0, basePitch: 96, pitchFilterMult: 1024.0, isSoft: true, samples: null },
+		{ name: "soften static", expression: 1.0, basePitch: 96, pitchFilterMult: 1024.0, isSoft: true, samples: null },
+		{ name: "soften 1-bit white", expression: 0.5, basePitch: 74.41, pitchFilterMult: 1024.0, isSoft: true, samples: null },
+		{ name: "soften 1-bit metallic", expression: 0.5, basePitch: 86.41, pitchFilterMult: 1024.0, isSoft: true, samples: null },
+		{ name: "soften crackling", expression: 0.9, basePitch: 69, pitchFilterMult: 1024.0, isSoft: true, samples: null },
+		{ name: "soften pink", expression: 0.5, basePitch: 69, pitchFilterMult: 8.0, isSoft: true, samples: null },
+		{ name: "soften brownian", expression: 1.0, basePitch: 69, pitchFilterMult: 1024.0, isSoft: true, samples: null },
+		{ name: "hard white", expression: 1.0, basePitch: 69, pitchFilterMult: 8.0, isSoft: false, samples: null },
+		{ name: "hard hollow", expression: 1.5, basePitch: 96, pitchFilterMult: 1.0, isSoft: false, samples: null },
+		{ name: " hard deep", expression: 1.5, basePitch: 120, pitchFilterMult: 1024.0, isSoft: false, samples: null },
     ]);
 
     public static readonly filterFreqStep: number = 1.0 / 4.0;
