@@ -288,10 +288,15 @@ export class Config {
         { name: "Whole Tone", realName: "whole tone", flags: [true, false, true, false, true, false, true, false, true, false, true, false] }, // Whole Tone
         { name: "Octatonic", realName: "octatonic", flags: [true, false, true, true, false, true, true, false, true, true, false, true] }, // Octatonic
         { name: "Hexatonic", realName: "hexatonic", flags: [true, false, false, true, true, false, false, true, true, false, false, true] }, // Hexatonic
-		{name: "Monotonic", realName: "monotonic", flags: [true,  false,  false,  false,  false,  false,  false,  false,  false,  false,  false, ] }, // Monotonic
-		{name: "Duotonic", realName: "duotonic", flags: [true,  false,  false,  false,  false,  false,  false,  true,  false,  false,  false,  false] }, // Duotonic
-		{name: "Die", realName: "die", flags: [true,  false,  false,  false,  false,  false,  false,  false,  true,  false,  false,  false] }, // Die
-		{name: "Noise Scale", realName: "noise scale", flags: [true,  false,  false,  false,  false,  false,  true,  false,  false,  false,  false,  false] }, // Noise Scale
+		{ name: "Monotonic", realName: "monotonic", flags: [true,  false,  false,  false,  false,  false,  false,  false,  false,  false,  false, ] }, // Monotonic
+		{ name: "Duotonic", realName: "duotonic", flags: [true,  false,  false,  false,  false,  false,  false,  true,  false,  false,  false,  false] }, // Duotonic
+		{ name: "Die", realName: "die", flags: [true,  false,  false,  false,  false,  false,  false,  false,  true,  false,  false,  false] }, // Die
+		{ name: "Noise Scale", realName: "noise scale", flags: [true,  false,  false,  false,  false,  false,  true,  false,  false,  false,  false,  false] }, // Noise Scale
+		{ name: "Pelog Zumir", realName: "pelog zumir", flags: [true,  false,  true,  true,  false,  true,  false,  true,  true,  false,  false,  true] }, // Pelog Zumir
+		{ name: "No Dabbing (MB)", realName: "no dabbing", flags:[true, true, false, true, true, true, true, true, true, false, true, false] },
+	    { name: "Jacked Toad (TB)", realName: "jacked toad", flags:[true, false, true , true, false, true, true, true, true, false, true, true] },
+		{ name: "Test Scale (TB)", realName: "**t", flags:[true, true, false, false, false, true, true, false, false, true, true, false] },
+		{ name: "Custom", realName: "custom", flags:[true, true, false, true, true, true, true, true, true, false, true, false] },
      ]);
     public static readonly keys: DictionaryArray<Key> = toNameMap([
 		{ name: "B-", isWhiteKey: false, basePitch: 11 },
@@ -308,6 +313,8 @@ export class Config {
         { name: "A", isWhiteKey: true, basePitch: 21 },
         { name: "A♯", isWhiteKey: false, basePitch: 22 },
         { name: "B", isWhiteKey: true, basePitch: 23 },
+		{ name: "B♯", isWhiteKey: false, basePitch: 23.5 },
+		{ name: "B♯♯", isWhiteKey: false, basePitch: 23.75 },
 		{ name: "O_O", isWhiteKey: false, basePitch: 24 },
     ]);
     public static readonly blackKeyNameParents: ReadonlyArray<number> = [-1, 1, -1, 1, -1, 1, -1, -1, 1, -1, 1, -1];
@@ -382,6 +389,7 @@ export class Config {
         { name: "organ", expression: 0.2, samples: centerAndNormalizeWave([11.0, 10.0, 12.0, 11.0, 14.0, 7.0, 5.0, 5.0, 12.0, 10.0, 10.0, 9.0, 12.0, 6.0, 4.0, 5.0, 13.0, 12.0, 12.0, 10.0, 12.0, 5.0, 2.0, 2.0, 8.0, 6.0, 6.0, 5.0, 8.0, 3.0, 2.0, 1.0]) },
         { name: "pan flute", expression: 0.35, samples: centerAndNormalizeWave([1.0, 4.0, 7.0, 6.0, 7.0, 9.0, 7.0, 7.0, 11.0, 12.0, 13.0, 15.0, 13.0, 11.0, 11.0, 12.0, 13.0, 10.0, 7.0, 5.0, 3.0, 6.0, 10.0, 7.0, 3.0, 3.0, 1.0, 0.0, 1.0, 0.0, 1.0, 0.0]) },
         { name: "glitch", expression: 0.5, samples: centerWave([1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, -1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, -1.0, -1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, -1.0, -1.0, -1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, -1.0, -1.0, -1.0, -1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, -1.0, -1.0, -1.0, -1.0, -1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, -1.0, -1.0, -1.0, -1.0, -1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, -1.0, -1.0, -1.0, -1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, -1.0, -1.0, -1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, -1.0, -1.0]) },
+		{ name: "trapezoid", expression: 1.0, samples: centerWave([1.0 / 15.0, 6.0 / 15.0, 10.0 / 15.0, 14.0 / 15.0, 15.0 / 15.0, 15.0 / 15.0, 15.0 / 15.0, 15.0 / 15.0, 15.0 / 15.0, 15.0 / 15.0, 15.0 / 15.0, 15.0 / 15.0, 14.0 / 15.0, 10.0 / 15.0, 6.0 / 15.0, 1.0 / 15.0, -1.0 / 15.0, -6.0 / 15.0, -10.0 / 15.0, -14.0 / 15.0, -15.0 / 15.0, -15.0 / 15.0, -15.0 / 15.0, -15.0 / 15.0, -15.0 / 15.0, -15.0 / 15.0, -15.0 / 15.0, -15.0 / 15.0, -14.0 / 15.0, -10.0 / 15.0, -6.0 / 15.0, -1.0 / 15.0,]) },
     ]);
     public static readonly chipWaves: DictionaryArray<ChipWave> = rawChipToIntegrated(Config.rawChipWaves);
     // Noise waves have too many samples to write by hand, they're generated on-demand by getDrumWave instead.
