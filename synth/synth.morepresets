@@ -1,0 +1,2 @@
+{ name: "unmodified" }, presets.tonamemap [{
+{ name: "chip", instrumenttype: chip wave, eqfiltertype: advanced, wave: square }
