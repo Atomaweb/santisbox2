@@ -49,9 +49,10 @@ export class EditorConfig {
             ])
         },
 		{
-            name: "Retro Presets", presets: <DictionaryArray<Preset>>toNameMap([
-                { name: "chip", midiProgram: 80, settings: { "type": "chip", "eqFilter": [], "effects": [], "transition": "normal", "fadeInSeconds": 0, "fadeOutTicks": -1, "chord": "simultaneous", "wave": "square", "unison": "none", "envelopes": [] } },
-		
+            name: "Unmodified", presets: <DictionaryArray<Preset>>toNameMap([
+                { name: "chip", midiProgram: 80, settings: { "type": "chip", "eqFilter": [], "effects": [], "transition": "normal", "fadeInSeconds": 0, "fadeOutTicks": -1, "chord": "simultaneous", "wave": "square", "unison": "none", "envelopes": [] } },	
+		        { name: "FM", midiProgram: 16, settings: { "type": "FM", "eqFilter": [], "effects": [], "transition": "normal", "fadeInSeconds": 0, "fadeOutTicks": -1, "chord": "simultaneous", "algorithm": "1 2 3 4", "feedbackType": "1⟲", "feedbackAmplitude": 0, "operators": [{ "frequency": "1×", "amplitude": 15 }, { "frequency": "1×", "amplitude": 0 }, { "frequency": "1×", "amplitude": 0 }, { "frequency": "1×", "amplitude": 0 }], "envelopes": [] } },
+				
             ])
         },
         {
@@ -307,6 +308,9 @@ export class EditorConfig {
                 { name: "sonar ping", midiProgram: 121, settings: { "type": "spectrum", "eqFilter": [], "effects": ["note filter", "reverb"], "noteFilter": [{ "type": "low-pass", "cutoffHz": 1681.79, "linearGain": 0.5 }], "reverb": 33, "transition": "normal", "fadeInSeconds": 0.0125, "fadeOutTicks": 72, "chord": "simultaneous", "spectrum": [100, 43, 29, 29, 14, 14, 14, 14, 14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "envelopes": [{ "target": "noteFilterAllFreqs", "envelope": "twang 2" }] } },
             ])
         },
+		name: "UltraBox Presets", presets: <DictionaryArray<Preset>>toNameMap([
+			{ name: "nes white", midiProgram: 116, generalMidi: true, isNoise: true, settings: { "type": "noise", "eqFilter": [], "eqFilterType": false, "eqSimpleCut": 8, "eqSimplePeak": 0, "eqSubFilters1": [], "effects": [ "panning" ], "pan": 0, "panDelay": 10, "fadeInSeconds": 0, "fadeOutTicks": 0, "wave": "1-bit white", "envelopes": [] } }, 
+                { name: "nes ping", midiProgram: 116, generalMidi: true, isNoise: true, settings: { "type": "noise", "eqFilter": [], "eqFilterType": false, "eqSimpleCut": 8, "eqSimplePeak": 0, "eqSubFilters1": [], "effects": [ "panning" ], "pan": 0, "panDelay": 10, "fadeInSeconds": 0, "fadeOutTicks": 0, "wave": "1-bit metallic", "envelopes": [] } },
     ]);
 
     public static valueToPreset(presetValue: number): Preset | null {
