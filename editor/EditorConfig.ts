@@ -301,6 +301,11 @@ export class EditorConfig {
                 { name: "sonar ping", midiProgram: 121, settings: { "type": "spectrum", "eqFilter": [], "effects": ["note filter", "reverb"], "noteFilter": [{ "type": "low-pass", "cutoffHz": 1681.79, "linearGain": 0.5 }], "reverb": 33, "transition": "normal", "fadeInSeconds": 0.0125, "fadeOutTicks": 72, "chord": "simultaneous", "spectrum": [100, 43, 29, 29, 14, 14, 14, 14, 14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "envelopes": [{ "target": "noteFilterAllFreqs", "envelope": "twang 2" }] } },
             ])
         },
+		{
+            name: "Santi's Box Presets", presets: <DictionaryArray<Preset>>toNameMap([
+                { name: "coleon soundtrack", midiProgram: 97, generalMidi: true, settings: { "type": "chip", "eqFilter": [], "effects": ["note filter", "chorus"], "noteFilter": [{ "type": "low-pass", "cutoffHz": 2378.41, "linearGain": 0.5 }], "chorus": 67, "transition": "normal", "fadeInSeconds": 0.0413, "fadeOutTicks": 72, "chord": "simultaneous", "wave": "sawtooth", "unison": "coleon", "envelopes": [{ "target": "noteFilterAllFreqs", "envelope": "flare 3" }] } },
+            ])
+        },
 		]);	
 
     public static valueToPreset(presetValue: number): Preset | null {
