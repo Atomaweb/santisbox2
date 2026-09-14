@@ -304,6 +304,7 @@ export class EditorConfig {
 		{
             name: "Santi's Box Presets", presets: <DictionaryArray<Preset>>toNameMap([
                 { name: "coleon soundtrack", midiProgram: 97, generalMidi: true, settings: { "type": "chip", "eqFilter": [], "effects": ["note filter", "chorus"], "noteFilter": [{ "type": "low-pass", "cutoffHz": 2378.41, "linearGain": 0.5 }], "chorus": 67, "transition": "normal", "fadeInSeconds": 0.0413, "fadeOutTicks": 72, "chord": "simultaneous", "wave": "sawtooth", "unison": "coleon", "envelopes": [{ "target": "noteFilterAllFreqs", "envelope": "flare 3" }] } },
+				{ name: "sawtooth wave", midiProgram: 80, settings: { "type": "chip", "eqFilter": [], "effects": ["aliasing"], "transition": "interrupt", "fadeInSeconds": 0, "fadeOutTicks": -1, "chord": "arpeggio", "wave": "sawtooth", "unison": "none", "envelopes": [] } },
             ])
         },
 		]);	
