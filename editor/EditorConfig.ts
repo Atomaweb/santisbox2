@@ -48,6 +48,12 @@ export class EditorConfig {
                 { name: "custom chip", customType: InstrumentType.customChipWave },
             ])
         },
+		{
+            name: "Retro Presets", presets: <DictionaryArray<Preset>>toNameMap([
+                { name: "chip", midiProgram: 80, settings: { "type": "chip", "eqFilter": [], "effects": [], "transition": "normal", "fadeInSeconds": 0, "fadeOutTicks": -1, "chord": "simultaneous", "wave": "square", "unison": "none", "envelopes": [] } },
+		
+            ])
+        },
         {
             name: "Retro Presets", presets: <DictionaryArray<Preset>>toNameMap([
                 { name: "square wave", midiProgram: 80, settings: { "type": "chip", "eqFilter": [], "effects": ["aliasing"], "transition": "interrupt", "fadeInSeconds": 0, "fadeOutTicks": -1, "chord": "arpeggio", "wave": "square", "unison": "none", "envelopes": [] } },
