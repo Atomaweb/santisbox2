@@ -429,6 +429,7 @@ export class Config {
 		{ name: "hard white", expression: 1.0, basePitch: 69, pitchFilterMult: 8.0, isSoft: false, samples: null },
 		{ name: "hard hollow", expression: 1.5, basePitch: 96, pitchFilterMult: 1.0, isSoft: false, samples: null },
 		{ name: " hard deep", expression: 1.5, basePitch: 120, pitchFilterMult: 1024.0, isSoft: false, samples: null },
+		{ name: " pyon😊 ", expression: 1.0, basePitch: 69, pitchFilterMult: 8.0, isSoft: false, samples: null }, 
     ]);
 
     public static readonly filterFreqStep: number = 1.0 / 4.0;
