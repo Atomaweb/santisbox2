@@ -297,7 +297,6 @@ export class Config {
 	    { name: "Jacked Toad (TB)", realName: "jacked toad", flags:[true, false, true , true, false, true, true, true, true, false, true, true] },
 		{ name: "Test Scale (TB)", realName: "**t", flags:[true, true, false, false, false, true, true, false, false, true, true, false] },
 		{ name: "Custom", realName: "custom", flags:[true, true, false, true, true, true, true, true, true, false, true, false] },
-		{ name: "Bruh", realName: "noise scale", flags: [false,  true,  false,  false,  false,  false,  true,  false,  false,  false,  false,  false] }, // Bruh
      ]);
     public static readonly keys: DictionaryArray<Key> = toNameMap([
 		{ name: "B-", isWhiteKey: false, basePitch: 11 },
