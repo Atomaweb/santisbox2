@@ -309,10 +309,7 @@ export class EditorConfig {
 				{ name: "noised timpani", midiProgram: 47, generalMidi: true, isNoise: true, settings: { "type": "spectrum", "eqFilter": [{ "type": "peak", "cutoffHz": 6727.17, "linearGain": 5.6569 }], "effects": ["pitch shift", "note filter", "reverb"], "pitchShiftSemitones": 15, "noteFilter": [{ "type": "low-pass", "cutoffHz": 19027.31, "linearGain": 0.5 }], "reverb": 33, "transition": "normal", "fadeInSeconds": 0, "fadeOutTicks": 48, "chord": "simultaneous", "spectrum": [100, 0, 0, 0, 86, 0, 0, 71, 0, 14, 43, 14, 43, 43, 0, 29, 43, 29, 29, 29, 43, 29, 43, 29, 43, 43, 43, 43, 43, 43], "envelopes": [{ "target": "noteFilterAllFreqs", "envelope": "twang 1" }, { "target": "pitchShift", "envelope": "twang 1" }] } },
 				{ name: "2-chorded", midiProgram: 55, settings: { "type": "FM","eqFilter":[],"eqFilterType":true,"eqSimpleCut":10,"eqSimplePeak":0,"envelopeSpeed":12,"discreteEnvelope":false,"effects":[],"panDelay":10,"fadeInSeconds":0,"fadeOutTicks":-1,"algorithm":"1 2 3 4","feedbackType":"1⟲","feedbackAmplitude":0,"operators":[{"frequency":"2×","amplitude":15,"waveform":"sine","pulseWidth":5},{"frequency":"5×","amplitude":15,"waveform":"sine","pulseWidth":5},{"frequency":"1×","amplitude":0,"waveform":"sine"},{"frequency":"1×","amplitude":0,"waveform":"sine"},{"frequency":"1×","amplitude":0,"waveform":"sine"},{"frequency":"1×","amplitude":0,"waveform":"sine"}],"envelopes":[]} },
             ])
-        },
-		{
-            name: "Banjo", presets: <DictionaryArray<Preset>>toNameMap([
-				{ name: "nitrogen monoxidejo", midiProgram: 105, generalMidi: true, settings: { "type": "FM", "effects": "reverb", "transition": "hard fade", "chord": "strum", "filterCutoffHz": 2828, "filterResonance": 14, "filterEnvelope": "twang 2", "vibrato": "none", "algorithm": "1←(2 3←4)", "feedbackType": "2⟲", "feedbackAmplitude": 4, "feedbackEnvelope": "steady", "operators": [{ "frequency": "0.125×", "amplitude": 14, "envelope": "custom" }, { "frequency": "1×", "amplitude": 10, "envelope": "steady" }, { "frequency": "11×", "amplitude": 3, "envelope": "twang 3" }, { "frequency": "1×", "amplitude": 11, "envelope": "steady" }] } },
+        },	
 		]);	
 
     public static valueToPreset(presetValue: number): Preset | null {
