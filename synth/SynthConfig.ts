@@ -60,12 +60,11 @@ export const enum EnvelopeType {
 	omega
 }
 
-export const enum InstrumentType {
+export const enum PitchInstrumentType {
     chip,
     fm,
     noise,
     spectrum,
-    drumset,
     harmonics,
     pwm,
     pickedString,
@@ -74,6 +73,13 @@ export const enum InstrumentType {
     mod,
 	fm6op,
     length,
+}
+
+export const enum NoiseInstrumentType {
+    noise,
+    spectrum,
+	drumset,
+	length,
 }
 
 export const enum DropdownID {
