@@ -38,7 +38,7 @@ export class EditorConfig {
             name: "Custom Instruments", presets: <DictionaryArray<Preset>>toNameMap([
                 { name: "chip wave", customType: InstrumentType.chip },
                 { name: "FM (expert)", customType: InstrumentType.fm },
-				{ name: "FM (6-Op)", customType: InstrumentType.fm6Op },
+				{ name: "FM (6-Op)", customType: InstrumentType.fm6op },
                 { name: "basic noise", customType: InstrumentType.noise },
                 { name: "spectrum", customType: InstrumentType.spectrum },
                 { name: "drumset", customType: InstrumentType.drumset },
