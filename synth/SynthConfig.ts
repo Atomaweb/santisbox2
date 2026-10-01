@@ -106,6 +106,12 @@ export const enum EffectType {
     transition,
     chord,
     // If you add more, you'll also have to extend the bitfield used in Base64 which currently uses two six-bit characters.
+	noteRange, //no longer just a placeholder :3
+    ringModulation,
+    granular,
+    phaser,
+    octaveShift, //Studio Box port placeholder just in case
+    invertWave,
     length,
 }
 
