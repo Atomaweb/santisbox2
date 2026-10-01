@@ -72,6 +72,7 @@ export const enum InstrumentType {
     customChipWave,
     mod,
 	fm6op,
+	fm2op,
 	drumset,
     length,
 }
@@ -538,6 +539,13 @@ export class Config {
     public static readonly maxChordSize: number = 9;
     public static readonly operatorCount: number = 4;
 	public static readonly maxPitchOrOperatorCount: number = Math.max(Config.maxChordSize, Config.operatorCount);
+	public static readonly algorithms2Op: DictionaryArray<Algorithm> = toNameMap([
+        { name: "1←(2)", carrierCount: 1, associatedCarrier: [1, 1], modulatedBy: [[2], []] },
+        { name: "1←2", carrierCount: 1, associatedCarrier: [1, 1], modulatedBy: [[2], []] },
+        { name: "1 2", carrierCount: 1, associatedCarrier: [1, 2], modulatedBy: [[], []] },
+        { name: "1←(2", carrierCount: 1, associatedCarrier: [1, 2], modulatedBy: [[1, 2], [2]] },
+        { name: "1←(2) 2←1", carrierCount: 1, associatedCarrier: [1, 2], modulatedBy: [[2], []] },
+    ]);
     public static readonly algorithms: DictionaryArray<Algorithm> = toNameMap([
         { name: "1←(2 3 4)", carrierCount: 1, associatedCarrier: [1, 1, 1, 1], modulatedBy: [[2, 3, 4], [], [], []] },
         { name: "1←(2 3←4)", carrierCount: 1, associatedCarrier: [1, 1, 1, 1], modulatedBy: [[2, 3], [], [4], []] },
@@ -679,6 +687,14 @@ export class Config {
         { name: "fall 3", type: EnvelopeType.fall, speed: 15.0 },
         { name: "omega 1", type: EnvelopeType.omega, speed: 3.0 },
         { name: "omega 2", type: EnvelopeType.omega, speed: 8.0 },	
+    ]);
+	 public static readonly feedbacks2Op: DictionaryArray<Feedback> = toNameMap([
+        { name: "1⟲", indices: [[1], []] },
+        { name: "2⟲", indices: [[], [2]] },
+        { name: "1⟲ 2⟲", indices: [[1], [2]] },
+        { name: "1→2", indices: [[], [1]] },
+        { name: "(2)→1", indices: [[], [1, 2]] },
+        { name: "ALL", indices: [[1,2], [1,2]] },
     ]);
     public static readonly feedbacks: DictionaryArray<Feedback> = toNameMap([
         { name: "1⟲", indices: [[1], [], [], []] },
