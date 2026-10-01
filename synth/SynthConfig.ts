@@ -65,6 +65,7 @@ export const enum InstrumentType {
     fm,
     noise,
     spectrum,
+	drumset,
     harmonics,
     pwm,
     pickedString,
@@ -73,7 +74,6 @@ export const enum InstrumentType {
     mod,
 	fm6op,
 	fm2op,
-	drumset,
     length,
 }
 
